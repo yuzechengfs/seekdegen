@@ -34,8 +34,8 @@ const extra = (Constants.expoConfig?.extra || {}) as {
 };
 
 const APP_BUILD_VERSION = `${Constants.expoConfig?.version || "0.1.0"}-20260312-01`;
-const DEFAULT_API_ORIGIN = "https://your-app-domain.example";
-const DEFAULT_APP_ORIGIN = "https://your-app-domain.example/app/";
+const DEFAULT_API_ORIGIN = "https://your-firebase-project.web.app";
+const DEFAULT_APP_ORIGIN = "https://your-firebase-project.web.app/app/";
 const APP_ORIGIN = extra.appOrigin || DEFAULT_APP_ORIGIN;
 const API_ORIGIN = extra.apiOrigin || DEFAULT_API_ORIGIN;
 const REQUEST_TIMEOUT_MS = 15000;

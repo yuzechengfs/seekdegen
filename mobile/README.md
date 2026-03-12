@@ -1,24 +1,42 @@
-# seekdegen Android container
+# seekdegen Android app
 
 This directory contains the Android container app for `seekdegen`.
 
-The current approach is intentionally pragmatic:
+The Android app does three things:
 
-- connect a Solana wallet natively
-- sign in with a wallet signature
-- inject the authenticated web session
-- render the hosted web product inside a WebView
+- connects a Solana wallet natively
+- signs the user in with a wallet signature
+- loads the hosted `seekdegen` web app inside a WebView
 
-## Why this structure
+## Before you run Android
 
-The product already has a working web client and backend flow. Keeping wallet handling in native code while reusing the web product lets the app move faster without rewriting the full experience immediately.
+The mobile app expects a deployed web app and API. Deploy those first from the repository root:
 
-## Start
+```bash
+npm install
+cp .env.example .env.local
+firebase login
+npm run deploy:firebase
+```
+
+Then update [app.json](app.json) so both endpoints point to your deployed server:
+
+```json
+{
+  "expo": {
+    "extra": {
+      "appOrigin": "https://your-firebase-project.web.app/app/",
+      "apiOrigin": "https://your-firebase-project.web.app"
+    }
+  }
+}
+```
+
+## Install dependencies
 
 ```bash
 cd mobile
 npm install
-npm run dev
 ```
 
 ## Run on Android
@@ -27,11 +45,18 @@ npm run dev
 npm run android
 ```
 
-## Hosted endpoints
+## Build a release APK
 
-Set these values in [app.json](app.json):
+From [android](android), build the release APK with your own keystore setup:
 
-- `appOrigin`
-- `apiOrigin`
+```bash
+cd android
+./gradlew assembleRelease
+```
 
-Use your own hosted domain before building a production APK.
+## Notes
+
+- Do not leave `localhost` in [app.json](app.json) for a phone build.
+- If the wallet is already connected, the app should restore entry automatically.
+- After sign-in, the user completes the profile flow in `Me`.
+- For signed release builds, create [android/keystore.properties](android/keystore.properties) from [android/keystore.properties.example](android/keystore.properties.example).

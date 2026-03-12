@@ -45,7 +45,7 @@ exports.web = onRequest(
 `.trimStart());
 
 writeFile("package.json", JSON.stringify({
-  name: "heart-signal-functions",
+  name: "seekdegen-functions",
   private: true,
   main: "index.js",
   engines: {

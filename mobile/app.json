@@ -10,8 +10,8 @@
       "edgeToEdgeEnabled": true
     },
     "extra": {
-      "appOrigin": "https://your-app-domain.example/app/",
-      "apiOrigin": "https://your-app-domain.example"
+      "appOrigin": "https://your-firebase-project.web.app/app/",
+      "apiOrigin": "https://your-firebase-project.web.app"
     }
   }
 }

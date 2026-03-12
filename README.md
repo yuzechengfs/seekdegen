@@ -25,7 +25,9 @@ This public copy has been sanitized for GitHub:
 - Mobile: Expo / React Native / Android WebView container
 - Wallet sign-in: Solana wallet signature flow
 
-## Quick start
+## Quick start (Android app)
+
+This is the default path for running `seekdegen` as a phone app. The Android container loads a hosted web build, so the web app and API should be deployed first.
 
 1. Install root dependencies.
 
@@ -33,19 +35,67 @@ This public copy has been sanitized for GitHub:
 npm install
 ```
 
-2. Copy the environment template.
+2. Install mobile dependencies.
+
+```bash
+cd mobile
+npm install
+cd ..
+```
+
+3. Copy the environment template.
 
 ```bash
 cp .env.example .env.local
 ```
 
-3. Start the local server.
+4. Add your Firebase project ID to `.env.local`.
+
+```bash
+FIREBASE_PROJECT_ID=your-firebase-project-id
+```
+
+5. Sign in to Firebase CLI.
+
+```bash
+firebase login
+```
+
+6. Deploy the web app and API to your hosted server.
+
+```bash
+npm run deploy:firebase
+```
+
+7. Update the mobile app endpoints in [mobile/app.json](mobile/app.json) so they point to your deployed server.
+
+```json
+{
+  "appOrigin": "https://your-firebase-project.web.app/app/",
+  "apiOrigin": "https://your-firebase-project.web.app"
+}
+```
+
+8. Run the Android app.
+
+```bash
+cd mobile
+npm run android
+```
+
+After the app opens, connect a Solana wallet and complete the profile flow in `Me`.
+
+## Local web development
+
+If you want to work on the web client without the Android container:
+
+1. Start the local server.
 
 ```bash
 npm run dev
 ```
 
-4. Open the app.
+2. Open the local web app.
 
 ```text
 http://localhost:4173/
@@ -95,6 +145,15 @@ npm run prepare:firebase
 firebase deploy --project "$FIREBASE_PROJECT_ID"
 ```
 
+After deployment, use your hosted server address in [mobile/app.json](mobile/app.json):
+
+```json
+{
+  "appOrigin": "https://your-firebase-project.web.app/app/",
+  "apiOrigin": "https://your-firebase-project.web.app"
+}
+```
+
 ## Android app
 
 The Android container project lives in [mobile](mobile).
@@ -105,13 +164,14 @@ It handles:
 - signature-based sign-in
 - loading the hosted web app in a WebView
 
-Before building Android, update the hosted URLs in [mobile/app.json](mobile/app.json) to point at your deployed web/API domain.
+Before building Android, make sure [mobile/app.json](mobile/app.json) points at your deployed server, not at `localhost`.
 
 ## Repository notes
 
 - this public copy excludes release keys and local keystore properties
 - this public copy excludes local runtime databases
 - this public copy keeps mock payloads because they are still useful as sample API shapes
+- reproducible deployment notes live in [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## Legal
 
