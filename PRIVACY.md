@@ -34,6 +34,8 @@ Retention depends on the deployment operated by the maintainer of a given instan
 
 This public repository does not include production secrets, private keystores, or local runtime databases. Deployers are responsible for protecting their own secrets and infrastructure.
 
+Firebase Secret Manager should only contain server-side service credentials. It should not contain user emails, wallet addresses, user IDs, admin identifiers, session tokens, or other personal/private account data.
+
 ## Contact
 
 Questions about privacy can be sent to:

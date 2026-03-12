@@ -61,6 +61,18 @@ If you want DeepSeek scoring in Firebase Functions:
 firebase functions:secrets:set DEEPSEEK_API_KEY
 ```
 
+Only store server-side API credentials in Firebase Secret Manager.
+
+Do not store any of the following in Firebase secrets:
+
+- user emails
+- wallet addresses
+- user IDs
+- admin account identifiers
+- session tokens
+- personal contact details
+- exported environment files with mixed private data
+
 ## 5. Deploy web app and API
 
 ```bash

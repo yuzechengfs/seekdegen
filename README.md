@@ -130,6 +130,13 @@ Important values:
 - `FIREBASE_PROJECT_ID`: target Firebase project for deployment
 - `DEEPSEEK_API_KEY`: optional local DeepSeek key if you want AI-assisted interest scoring outside Firebase Secret Manager
 
+## Secret handling
+
+- never commit `.env`, `.env.local`, `.firebaserc`, keystore files, or any exported Firebase config that contains real values
+- Firebase Secret Manager should only store server-side machine credentials such as `DEEPSEEK_API_KEY`
+- do not store user emails, wallet addresses, user IDs, admin IDs, session tokens, contact details, or any personal data in Firebase secrets
+- keep project-specific IDs and private keys outside this public repository
+
 ## Firebase deployment
 
 This repository intentionally does not include a bound Firebase project. Before deploying:
