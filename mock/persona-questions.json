@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "can_retake": true,
+    "retake_available_at": null,
+    "questions": [
+      {
+        "question_id": "pq_001",
+        "question_order": 1,
+        "question_text": "你更舒服的聊天节奏是？",
+        "options": [
+          { "option_id": "pqo_001a", "option_key": "A", "option_text": "想到就聊，频率高一点更有安全感" },
+          { "option_id": "pqo_001b", "option_key": "B", "option_text": "每天稳定聊一会儿就很好" },
+          { "option_id": "pqo_001c", "option_key": "C", "option_text": "不用高频，但希望关键时刻能出现" },
+          { "option_id": "pqo_001d", "option_key": "D", "option_text": "慢一点没关系，重要的是内容有分量" }
+        ]
+      },
+      {
+        "question_id": "pq_002",
+        "question_order": 2,
+        "question_text": "如果喜欢一个人，你更可能怎么表达？",
+        "options": [
+          { "option_id": "pqo_002a", "option_key": "A", "option_text": "直接说出来" },
+          { "option_id": "pqo_002b", "option_key": "B", "option_text": "先暗示，看对方反应" },
+          { "option_id": "pqo_002c", "option_key": "C", "option_text": "通过行动表现" },
+          { "option_id": "pqo_002d", "option_key": "D", "option_text": "很久以后才敢承认" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "submitted": false,
+    "main_task": {
+      "signal_task_id": "st_007",
+      "signal_type": "interest",
+      "title": "Which crypto sector are you into most right now?",
+      "prompt_text": "Choose the crypto sector you follow most closely right now.",
+      "options": [
+        "Layer 1 / Public Chains (Ethereum, Solana)",
+        "Exchange Tokens",
+        "DeFi",
+        "AI",
+        "GameFi",
+        "Meme",
+        "RWA",
+        "DePIN",
+        "Layer 2",
+        "Payments / Finance",
+        "Privacy",
+        "Storage / Compute",
+        "Stablecoins",
+        "NFT",
+        "SocialFi"
+      ]
+    },
+    "extra_tasks": [
+      {
+        "signal_task_id": "st_010",
+        "signal_type": "sensation",
+        "title": "三种夜晚",
+        "prompt_text": "三种夜晚里，你更想停在哪一种：",
+        "options": ["雨后安静街道", "有人声的便利店灯光", "高楼窗边的夜景"]
+      }
+    ]
+  }
+}

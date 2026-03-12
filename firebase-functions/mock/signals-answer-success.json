@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "signal_answer_id": "usa_kai_001",
+    "moderation_status": "approved",
+    "recommendations_unlocked": true
+  }
+}

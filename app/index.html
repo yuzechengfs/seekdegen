@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Degen Signal</title>
+  <link rel="stylesheet" href="/app/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <main class="device">
+      <div id="toast" class="toast"></div>
+      <div id="attention-overlay" class="attention-overlay hidden">
+        <div class="attention-card">
+          <div id="attention-eyebrow" class="eyebrow">Degen Signal</div>
+          <h3 id="attention-title" style="margin-top:10px;">A new update is waiting</h3>
+          <p id="attention-body" class="subtle" style="margin-top:10px;">Open it now.</p>
+          <div class="row" style="margin-top:16px;">
+            <button id="attention-open-btn" class="btn primary block">Open now</button>
+            <button id="attention-dismiss-btn" class="btn secondary block">Later</button>
+          </div>
+        </div>
+      </div>
+
+      <section id="screen-login" class="screen active">
+        <div class="topbar">
+          <span>Degen Signal</span>
+          <span></span>
+        </div>
+        <div class="hero">
+          <h2>Feel the spark,<br />then start the chat.</h2>
+          <p class="subtle">Connect your wallet to enter Degen Signal.</p>
+        </div>
+        <div class="content">
+          <div id="wallet-connection-card" class="card hidden"></div>
+          <button id="wallet-connect-btn" class="btn primary block">Connect Wallet</button>
+          <div id="load-status" class="status hidden"></div>
+          <button id="load-retry-btn" class="btn secondary block hidden" style="margin-top:12px;">Try Again</button>
+        </div>
+      </section>
+
+      <section id="screen-profile" class="screen">
+        <div class="topbar">
+          <button class="btn ghost small" data-back="screen-login">Back</button>
+          <span>Profile</span>
+        </div>
+        <div class="content">
+          <div class="card">
+            <h3>Complete your profile</h3>
+            <p class="subtle">These details shape your recommendations and boundaries.</p>
+          </div>
+          <div class="field">
+            <label for="nickname">Nickname</label>
+            <input id="nickname" value="Kai" />
+          </div>
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" value="Manila" />
+          </div>
+          <div class="field">
+            <label for="age">Age</label>
+            <input id="age" type="number" min="18" max="99" value="24" />
+          </div>
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender">
+              <option value="">Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <button id="profile-submit" class="btn primary block">Continue</button>
+        </div>
+      </section>
+
+      <section id="screen-persona" class="screen">
+        <div class="topbar">
+          <span id="persona-step">Signal Profile</span>
+          <span>About 2 min</span>
+        </div>
+        <div class="content">
+          <div class="progress"><span id="persona-progress"></span></div>
+          <div class="card">
+            <h3 id="persona-question-text"></h3>
+            <div id="persona-options" class="option-list"></div>
+          </div>
+          <button id="persona-next" class="btn primary block" disabled>Next</button>
+        </div>
+      </section>
+
+      <section id="screen-persona-result" class="screen">
+        <div class="topbar">
+          <span>Your result</span>
+          <span>Ready</span>
+        </div>
+        <div class="content">
+          <div id="persona-result-card" class="card soft"></div>
+          <button id="persona-result-next" class="btn primary block">Enter Degen Signal</button>
+        </div>
+      </section>
+
+      <section id="screen-app" class="screen">
+        <div class="topbar">
+          <span id="app-title">Signal Hub</span>
+          <span id="app-meta">Curated from your signals</span>
+        </div>
+
+        <nav class="tabbar">
+          <button class="tab" data-panel="me">Me <span id="tab-badge-me" class="tab-badge hidden"></span></button>
+          <button class="tab active" data-panel="home">Signal Hub <span id="tab-badge-home" class="tab-badge hidden"></span></button>
+          <button class="tab" data-panel="explore">Explore <span id="tab-badge-explore" class="tab-badge hidden"></span></button>
+          <button class="tab" data-panel="story">Story Room <span id="tab-badge-story" class="tab-badge hidden"></span></button>
+          <button class="tab" data-panel="messages">Messages <span id="tab-badge-messages" class="tab-badge hidden"></span></button>
+        </nav>
+
+        <div id="panel-home" class="panel active">
+          <div id="home-guide-card" class="card hidden"></div>
+          <div id="home-signal-card" class="card soft"></div>
+          <div id="home-story-card" class="card warm hidden"></div>
+          <div id="home-summary-card" class="card"></div>
+        </div>
+
+        <div id="panel-explore" class="panel hidden">
+          <div class="card">
+            <div class="between" style="align-items:flex-start; gap:12px;">
+              <div id="explore-tabs" class="chips">
+                <button class="chip chip-button" data-explore-tab="recommended">Recommended</button>
+                <button class="chip chip-button" data-explore-tab="same_signal">Shared Signal</button>
+                <button class="chip chip-button" data-explore-tab="same_city">Same City</button>
+                <button class="chip chip-button" data-explore-tab="new">New</button>
+                <button class="chip chip-button" data-explore-tab="review">Review</button>
+              </div>
+              <button id="explore-refresh-btn" class="btn secondary small">Refresh</button>
+            </div>
+          </div>
+          <div id="explore-lock" class="card warm hidden"></div>
+          <div id="explore-detail" class="card soft hidden"></div>
+          <div id="explore-list"></div>
+        </div>
+
+        <div id="panel-story" class="panel hidden">
+          <div id="story-list-card" class="card"></div>
+          <div id="story-detail" class="hidden">
+            <div id="story-header-card" class="card soft"></div>
+            <div id="story-question-card" class="card"></div>
+            <div id="story-insight-card" class="card hidden"></div>
+          </div>
+        </div>
+
+        <div id="panel-messages" class="panel hidden">
+          <div id="chat-list-card" class="card soft"></div>
+          <div id="chat-thread-card" class="card"></div>
+          <div id="chat-compose-card" class="card"></div>
+        </div>
+
+        <div id="panel-me" class="panel hidden">
+          <div id="me-profile-card" class="card soft"></div>
+          <div id="me-signal-card" class="card"></div>
+          <div id="me-stats-card" class="card"></div>
+          <div id="me-safety-card" class="card"></div>
+          <div id="me-admin-card" class="card"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/app/src/main.js"></script>
+</body>
+</html>

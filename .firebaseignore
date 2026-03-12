@@ -1,0 +1,14 @@
+.git
+.gitignore
+.firebase
+.firebaserc
+.env
+.env.local
+data
+mobile
+scripts
+node_modules
+seeker-lovegame-*.md
+*.sql
+*.zip
+README.md

@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "access_token": "jwt_demo_kai",
+    "refresh_token": "refresh_demo_kai",
+    "user_id": "u_demo_kai",
+    "onboarding_status": "eligible"
+  }
+}

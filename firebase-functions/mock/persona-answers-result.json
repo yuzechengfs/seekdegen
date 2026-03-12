@@ -1,0 +1,11 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "persona_tags": [
+      { "tag_code": "slow_resonance", "tag_name": "慢热共振型", "score": 92.0 },
+      { "tag_code": "steady_companion", "tag_name": "稳定陪伴型", "score": 88.0 }
+    ],
+    "onboarding_status": "signal_pending"
+  }
+}

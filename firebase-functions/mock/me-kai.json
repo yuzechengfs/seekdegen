@@ -1,0 +1,18 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "user_id": "u_demo_kai",
+    "status": "has_chat",
+    "verification_status": "verified",
+    "onboarding_status": "eligible",
+    "profile": {
+      "nickname": "Kai",
+      "age": 24,
+      "city": "Manila",
+      "gender": "male",
+      "match_preference": "stable_relationship",
+      "avatar_url": "https://example.com/avatar/kai.png"
+    }
+  }
+}

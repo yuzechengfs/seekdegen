@@ -1,0 +1,29 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "candidate_user_id": "u_demo_linlan",
+    "nickname": "林岚",
+    "age": 24,
+    "city": "Shanghai",
+    "avatar_url": "https://example.com/avatar/linlan.png",
+    "bio": "Following Layer 2 scaling and infrastructure projects closely.",
+    "persona_tags": [
+      { "tag_code": "slow_resonance", "tag_name": "慢热共振型" },
+      { "tag_code": "detail_observer", "tag_name": "细节观察型" }
+    ],
+    "recent_signals": [
+      {
+        "signal_answer_id": "usa_lin_002",
+        "title": "Current market focus",
+        "answer_preview": "Layer 2"
+      },
+      {
+        "signal_answer_id": "usa_lin_001",
+        "title": "比起秒回，你更看重",
+        "answer_preview": "回得真诚"
+      }
+    ],
+    "interaction_state": "story_room_active"
+  }
+}

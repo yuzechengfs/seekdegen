@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "question_index": 3,
+    "total_questions": 3,
+    "room_status": "completed",
+    "insight": "你们都更偏向沟通，只是时机感不同。",
+    "chat_unlocked": true,
+    "chat_thread_id": "ct_demo_002"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "items": [
+      {
+        "thread_id": "ct_demo_001",
+        "relation_id": "rel_demo_002",
+        "peer": {
+          "user_id": "u_demo_anyu",
+          "nickname": "安羽",
+          "avatar_url": "https://example.com/avatar/anyu.png"
+        },
+        "last_message": {
+          "content": "那我们对“被在意”的理解可能挺接近。",
+          "created_at": "2026-03-11T06:45:00Z",
+          "sender_user_id": "u_demo_anyu"
+        },
+        "unread_count": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "page": 1,
+    "page_size": 10,
+    "total": 3,
+    "items": [
+      {
+        "candidate_user_id": "u_demo_linlan",
+        "nickname": "林岚",
+        "age": 24,
+        "city": "Shanghai",
+        "avatar_url": "https://example.com/avatar/linlan.png",
+        "persona_tags": ["慢热共振型", "细节观察型"],
+        "recent_signal_preview": "比起秒回，我更在意对方有没有认真听。",
+        "recommend_reason": "你们都偏好稳定聊天节奏，也都把被理解看得很重。",
+        "interaction_state": "story_room_active"
+      },
+      {
+        "candidate_user_id": "u_demo_anyu",
+        "nickname": "安羽",
+        "age": 23,
+        "city": "Shenzhen",
+        "avatar_url": "https://example.com/avatar/anyu.png",
+        "persona_tags": ["细节观察型", "稳定陪伴型"],
+        "recent_signal_preview": "我会因为一个人记住小细节而心动。",
+        "recommend_reason": "你们都容易被细节和稳定的在场感打动。",
+        "interaction_state": "responded_pending"
+      },
+      {
+        "candidate_user_id": "u_demo_suqi",
+        "nickname": "苏绮",
+        "age": 25,
+        "city": "Hangzhou",
+        "avatar_url": "https://example.com/avatar/suqi.png",
+        "persona_tags": ["夜聊流动型", "慢热共振型"],
+        "recent_signal_preview": "希望你不用很会表达，也能让我感到在场。",
+        "recommend_reason": "你们都对夜晚氛围和慢节奏靠近有明显偏好。",
+        "interaction_state": "skipped"
+      }
+    ]
+  }
+}

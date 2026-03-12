@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "active_rooms": [
+      {
+        "story_room_id": "sr_demo_001",
+        "relation_id": "rel_demo_001",
+        "nickname": "林岚",
+        "avatar_url": "https://example.com/avatar/linlan.png",
+        "room_status": "active",
+        "answered_rounds": 2,
+        "total_questions": 3,
+        "expires_at": "2026-03-12T18:00:00Z"
+      }
+    ],
+    "completed_rooms": [
+      {
+        "story_room_id": "sr_demo_002",
+        "relation_id": "rel_demo_002",
+        "nickname": "安羽",
+        "room_status": "completed",
+        "chat_unlocked": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "today_signal": {
+      "submitted": true,
+      "title": "Which crypto sector are you into most right now?",
+      "answer_preview": "Layer 1 / Public Chains (Ethereum, Solana)"
+    },
+    "recommendation_summary": {
+      "unlocked": true,
+      "count": 3,
+      "preview_users": [
+        {
+          "candidate_user_id": "u_demo_linlan",
+          "nickname": "林岚",
+          "persona_tags": ["Layer 2 scout", "Infrastructure"],
+          "recommend_reason": "You both track base-layer infrastructure and would likely have a lot to compare."
+        },
+        {
+          "candidate_user_id": "u_demo_anyu",
+          "nickname": "安羽",
+          "persona_tags": ["DeFi strategist", "Market structure"],
+          "recommend_reason": "Your sectors are adjacent enough to make the conversation useful."
+        }
+      ]
+    },
+    "story_room_summary": {
+      "count": 1,
+      "items": [
+        {
+          "story_room_id": "sr_demo_001",
+          "nickname": "林岚",
+          "progress_text": "2 / 3",
+          "expires_in_hours": 32
+        }
+      ]
+    },
+    "incoming_response_count": 1,
+    "unread_message_count": 1
+  }
+}

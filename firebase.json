@@ -1,0 +1,37 @@
+{
+  "functions": {
+    "source": "firebase-functions",
+    "runtime": "nodejs22",
+    "codebase": "default"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "mobile/**",
+      "data/**",
+      "scripts/**",
+      "seeker-lovegame-*.md",
+      "*.sql",
+      "*.zip"
+    ],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/app/",
+        "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": {
+          "functionId": "web",
+          "region": "asia-southeast1"
+        }
+      }
+    ]
+  }
+}

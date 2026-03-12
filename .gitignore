@@ -1,0 +1,15 @@
+node_modules/
+mobile/.npm-cache/
+.env
+.env.local
+data/runtime-state.db
+data/runtime-state.db-shm
+data/runtime-state.db-wal
+.firebase/
+public-export/
+mobile/android/build/
+mobile/android/app/build/
+mobile/android/.gradle/
+mobile/android/app/debug.keystore
+mobile/android/keystore.properties
+mobile/android/app/seekdegen-release.keystore

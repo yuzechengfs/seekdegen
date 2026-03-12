@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "story_room_id": "sr_demo_001",
+    "relation_id": "rel_demo_001",
+    "room_status": "active",
+    "answered_rounds": 2,
+    "total_questions": 3,
+    "current_question_index": 3,
+    "expires_at": "2026-03-12T18:00:00Z",
+    "peer": {
+      "user_id": "u_demo_linlan",
+      "nickname": "林岚",
+      "avatar_url": "https://example.com/avatar/linlan.png"
+    },
+    "current_question": {
+      "story_question_id": "sq_008",
+      "question_type": "single_choice",
+      "content": "面对一件小误会，你更偏向：",
+      "options": [
+        { "option_id": "A", "option_text": "当下解释清楚" },
+        { "option_id": "B", "option_text": "等情绪下去再说" },
+        { "option_id": "C", "option_text": "看情况，不一定讲" }
+      ]
+    },
+    "my_answer_submitted": false,
+    "peer_answer_submitted": true
+  }
+}
