@@ -182,7 +182,6 @@ Before building Android, make sure [mobile/app.json](mobile/app.json) points at 
 
 ## Legal
 
-- [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
 - [TERMS_AND_CONDITIONS.md](TERMS_AND_CONDITIONS.md)
 - [COPYRIGHT.md](COPYRIGHT.md)
 - [LICENSE](LICENSE)
